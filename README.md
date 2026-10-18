@@ -3,5 +3,5 @@ Proyecto individual de Diseño de Interfaces Web: investigación, arquitectura d
 
 ## Documentación
 
-- [Brief del proyecto — borrador](BRIEF.md)
+- [Brief del proyecto](BRIEF.md)
 - [Registro de uso de IA](CHANGELOG.md)
