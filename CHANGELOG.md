@@ -95,6 +95,3 @@ Registro de la revisión y documentación del proyecto con IA, organizado por et
 - Qué conservé: Los cuatro campos exigidos.
 - Qué cambié: Se sustituyeron las peticiones hipotéticas por resúmenes de consultas y materiales realmente compartidos.
 
-## Pendiente
-
-Realizar la prueba del tablero con alguien ajeno al proyecto y registrar su resultado. No se dan por realizadas pruebas del prototipo, mediciones técnicas, finalización de componentes o publicación en GitHub sin confirmación.
