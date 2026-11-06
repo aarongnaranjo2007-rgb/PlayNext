@@ -95,17 +95,24 @@ Registro de la revisión y documentación del proyecto con IA, organizado por et
 - Qué conservé: Los cuatro campos exigidos.
 - Qué cambié: Se sustituyeron las peticiones hipotéticas por resúmenes de consultas y materiales realmente compartidos.
 
-## 2026-11-06 · Ajuste de jerarquía en Inicio tras análisis con Stitch
+## 06/11/2026 · Ajuste de jerarquía en Inicio tras análisis con Stitch
 
 - **Qué le pedí a la IA:** Valoración de la propuesta de Stitch para mantener los accesos directos de "Jugar solo" y "Jugar con amigos" en la pantalla de Inicio vinculados a la preselección en el formulario.
 - **Qué me devolvió:** Recomendación de jerarquizar visualmente los elementos: botón primario sólido prominente para "Elegir por mí" y botones secundarios de contorno para los atajos preconfigurados.
 - **Qué conservé:** El patrón de atajo rápido de "Jugar solo" y "Jugar con amigos" para precargar el estado correspondiente en la pantalla de preferencias.
 - **Qué cambié:** Se redujo el peso visual de los atajos frente al CTA principal mediante estilos secundarios para evitar la competencia visual que existía en el wireframe original de la Órbita 1.
 
-## 2026-11-06 · Descarte de la propuesta de Stitch para Preferencias y validación del diseño final
+## 06/11/2026 · Descarte de la propuesta de Stitch para Preferencias y validación del diseño final
 
 - **Qué le pedí a la IA (Google Stitch):** Generación de una alternativa rediseñada para la pantalla de "Preferencias de juego".
 - **Qué me devolvió:** Una propuesta compleja de doble columna en formato modal, con el modo "Jugar en grupo" activo de forma predeterminada, un selector de número de jugadores visible y un formulario basado en tradicionales casillas de verificación (checkboxes).
 - **Qué conservé:** Únicamente la idea de estructurar el contenido en bloques o paneles visualmente acotados para organizar mejor la información.
 - **Qué cambié:** Descarte por completo la propuesta de Stitch por varios motivos críticos: obligaba a interactuar con el flujo grupal (incoherente con el happy path individual de Alex), utilizaba checkboxes de difícil interacción táctil en lugar de chips y adoptaba una estructura de ventana modal que rompía la navegación natural. En su lugar, dibujé una pantalla completa con "Jugar solo" preseleccionado (ocultando el contador de jugadores) y transformé las opciones en chips interactivos agrupados en dos tarjetas temáticas claras (Tiempo/Plataforma y Géneros).
+
+  ## 07/11/2026 · Rediseño de la pantalla de Recomendación
+
+- **Qué le pedí a la IA (Google Stitch):** Generación de una propuesta con jerarquía mejorada para la pantalla de Recomendación.
+- **Qué me devolvió:** Un diseño que integra la justificación "¿Por qué encaja contigo hoy?" en un panel lateral con factores clave, añade un indicador de afinidad y un botón directo "Probar con otro juego ↻".
+- **Qué conservé:** El panel de justificación por factores clave y el botón de descarte rápido "Probar con otro juego ↻" junto al CTA principal.
+- **Qué cambié:** Decidí descartar de forma definitiva las miniportadas secundarias que estaban en el wireframe original de la Órbita 1 para priorizar un layout más limpio y directo para Alex, evitando elementos visuales superfluos antes de entrar a la ficha completa.
 
