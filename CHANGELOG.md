@@ -95,3 +95,10 @@ Registro de la revisión y documentación del proyecto con IA, organizado por et
 - Qué conservé: Los cuatro campos exigidos.
 - Qué cambié: Se sustituyeron las peticiones hipotéticas por resúmenes de consultas y materiales realmente compartidos.
 
+## 2026-11-06 · Ajuste de jerarquía en Inicio tras análisis con Stitch
+
+- **Qué le pedí a la IA:** Valoración de la propuesta de Stitch para mantener los accesos directos de "Jugar solo" y "Jugar con amigos" en la pantalla de Inicio vinculados a la preselección en el formulario.
+- **Qué me devolvió:** Recomendación de jerarquizar visualmente los elementos: botón primario sólido prominente para "Elegir por mí" y botones secundarios de contorno para los atajos preconfigurados.
+- **Qué conservé:** El patrón de atajo rápido de "Jugar solo" y "Jugar con amigos" para precargar el estado correspondiente en la pantalla de preferencias.
+- **Qué cambié:** Se redujo el peso visual de los atajos frente al CTA principal mediante estilos secundarios para evitar la competencia visual que existía en el wireframe original de la Órbita 1.
+
