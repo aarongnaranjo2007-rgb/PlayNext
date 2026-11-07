@@ -123,3 +123,10 @@ Registro de la revisión y documentación del proyecto con IA, organizado por et
 - **Qué conservé:** El layout en dos columnas para separar datos técnicos de la sinopsis/acción de compra, la jerarquización del botón principal "Jugar en Steam →" en una tarjeta destacada y la inclusión de chips de datos clave (`< 45 min`, verificación en Steam Deck) para la persona principal (Alex).
 - **Qué cambié:** Se descartó el botón de "Añadir a favoritos" para mantener estricta coherencia con el alcance del MVP; se reincorporó el carrusel de tres miniportadas bajo la captura principal respetando la identidad del wireframe previo; y se eliminaron enlaces de retroceso redundantes (`< Modificar mis filtros`) dejando una única salida clara hacia la recomendación.
 
+## 07/11/2026 · Construcción del Sistema de Color y Tokens Semánticos 
+
+- **Qué le pedí a la IA:** A partir del inventario de tokens del Paso 1 y de la selección inicial de colores que definí para Playnext (la gama fría slate con base oscura #0B0F19, el acento índigo y el ámbar de soporte), pedí ayuda para estructurar las escalas numéricas completas (50 al 900) y verificar la tabla matemática de contrastes WCAG 2.2 para los modos claro y oscuro.
+- **Qué me devolvió:** La propuesta de pasos intermedios para completar las familias cromáticas primitivas, el desglose de ratios de contraste para cada pareja semántica y la justificación teórica basada en la regla 60-30-10 y la reducción de fatiga decisional de Alex.
+- **Qué conservé:** La validación de ratios accesibles (WCAG AA/AAA) calculados para cada pareja y la estructura de comportamiento adaptativo en modo oscuro (donde el botón primario pasa a un tono más luminoso con tipografía oscura para evitar deslumbramientos).
+- **Qué cambié:** Mantuve el control directo sobre la paleta: descarté gamas secundarias adicionales sugeridas inicialmente (como tonos cyan) para ceñirme de forma estricta a los tokens y necesidades reales que ya había determinado en mi inventario de la Órbita 1.
+
