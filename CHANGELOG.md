@@ -109,10 +109,17 @@ Registro de la revisión y documentación del proyecto con IA, organizado por et
 - **Qué conservé:** Únicamente la idea de estructurar el contenido en bloques o paneles visualmente acotados para organizar mejor la información.
 - **Qué cambié:** Descarte por completo la propuesta de Stitch por varios motivos críticos: obligaba a interactuar con el flujo grupal (incoherente con el happy path individual de Alex), utilizaba checkboxes de difícil interacción táctil en lugar de chips y adoptaba una estructura de ventana modal que rompía la navegación natural. En su lugar, dibujé una pantalla completa con "Jugar solo" preseleccionado (ocultando el contador de jugadores) y transformé las opciones en chips interactivos agrupados en dos tarjetas temáticas claras (Tiempo/Plataforma y Géneros).
 
-  ## 07/11/2026 · Rediseño de la pantalla de Recomendación
+## 07/11/2026 · Rediseño de la pantalla de Recomendación
 
 - **Qué le pedí a la IA (Google Stitch):** Generación de una propuesta con jerarquía mejorada para la pantalla de Recomendación.
 - **Qué me devolvió:** Un diseño que integra la justificación "¿Por qué encaja contigo hoy?" en un panel lateral con factores clave, añade un indicador de afinidad y un botón directo "Probar con otro juego ↻".
 - **Qué conservé:** El panel de justificación por factores clave y el botón de descarte rápido "Probar con otro juego ↻" junto al CTA principal.
 - **Qué cambié:** Decidí descartar de forma definitiva las miniportadas secundarias que estaban en el wireframe original de la Órbita 1 para priorizar un layout más limpio y directo para Alex, evitando elementos visuales superfluos antes de entrar a la ficha completa.
+
+## 07/11/2026 · Rediseño de la pantalla de Ficha del juego 
+
+- **Qué le pedí a la IA:** Generación de una estructura visual optimizada para la pantalla final de "Ficha del juego" orientada a la toma de decisión rápida.
+- **Qué me devolvió:** Una propuesta a dos columnas con material visual a la izquierda, metadatos y tarjeta de conversión a la derecha, e inclusión de botones secundarios como "Añadir a favoritos" y atajos adicionales.
+- **Qué conservé:** El layout en dos columnas para separar datos técnicos de la sinopsis/acción de compra, la jerarquización del botón principal "Jugar en Steam →" en una tarjeta destacada y la inclusión de chips de datos clave (`< 45 min`, verificación en Steam Deck) para la persona principal (Alex).
+- **Qué cambié:** Se descartó el botón de "Añadir a favoritos" para mantener estricta coherencia con el alcance del MVP; se reincorporó el carrusel de tres miniportadas bajo la captura principal respetando la identidad del wireframe previo; y se eliminaron enlaces de retroceso redundantes (`< Modificar mis filtros`) dejando una única salida clara hacia la recomendación.
 
