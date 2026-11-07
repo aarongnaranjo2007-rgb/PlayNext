@@ -127,6 +127,13 @@ Registro de la revisión y documentación del proyecto con IA, organizado por et
 
 - **Qué le pedí a la IA:** A partir del inventario de tokens del Paso 1 y de la selección inicial de colores que definí para Playnext (la gama fría slate con base oscura #0B0F19, el acento índigo y el ámbar de soporte), pedí ayuda para estructurar las escalas numéricas completas (50 al 900) y verificar la tabla matemática de contrastes WCAG 2.2 para los modos claro y oscuro.
 - **Qué me devolvió:** La propuesta de pasos intermedios para completar las familias cromáticas primitivas, el desglose de ratios de contraste para cada pareja semántica y la justificación teórica basada en la regla 60-30-10 y la reducción de fatiga decisional de Alex.
+
+## 07/11/2026 · Definición de Tipografía, Escala Proporcional y Semántica HTML 
+
+- **Qué le pedí a la IA:** Orientación para estructurar la escala tipográfica de 7 niveles, verificar la correspondencia con las etiquetas HTML a partir de mis wireframes rediseñados y plantear el bloque de prueba de texto al 200 % exigido por WCAG 1.4.4.
+- **Qué me devolvió:** Una propuesta inicial de escala con textos genéricos y dos pesos adicionales (incluyendo Bold 700), junto con una tabla preliminar con niveles repetidos.
+- **Qué conservé:** El uso de Plus Jakarta Sans como familia única de Google Fonts, la tabla de correspondencia semántica que explica cómo el sistema sustituye el estilo nativo del navegador y el planteamiento del test de ampliación al 200 % con Auto Layout.
+- **Qué cambié:** Unifiqué el peso del logotipo a Semi-Bold (600) para ceñirme de forma estricta a solo dos archivos de descarga (400 y 600) según las pautas WSG; corregí los textos de ejemplo para utilizar exclusivamente los copys reales de mis pantallas rediseñadas (Inicio, Preferencias, Recomendación y Ficha); y fusioné la fila duplicada de `body-md` en la tabla HTML para agrupar párrafos `<p>` y enlaces `<a>` bajo el mismo token visual.
 - **Qué conservé:** La validación de ratios accesibles (WCAG AA/AAA) calculados para cada pareja y la estructura de comportamiento adaptativo en modo oscuro (donde el botón primario pasa a un tono más luminoso con tipografía oscura para evitar deslumbramientos).
 - **Qué cambié:** Mantuve el control directo sobre la paleta: descarté gamas secundarias adicionales sugeridas inicialmente (como tonos cyan) para ceñirme de forma estricta a los tokens y necesidades reales que ya había determinado en mi inventario de la Órbita 1.
 
