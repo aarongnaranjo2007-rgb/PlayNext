@@ -31,7 +31,7 @@
 
 ## Resumen de decisiones
 ### Rediseño de los wireframes
-Se simplificaron los pasos para reducir la carga cognitiva (Ley de Hick). En Recomendación se añadieron 3 factores clave transparentes y se reordenó la botonera inferior para no repetir acciones ni confundir el flujo.
+Se simplificaron los pasos para reducir la carga cognitiva (Ley de Hick). En Recomendación se añadieron 3 factores clave transparentes y se reordenó los botones inferiores para no repetir acciones ni confundir el flujo.
 
 ### Color
 Color principal índigo (`#4F46E5`) por su contraste y asociación con entornos digitales/gaming accesibles. El contraste mínimo cumple WCAG AA en ambos modos (> 4,5:1 en textos con `color/on-surface`).
