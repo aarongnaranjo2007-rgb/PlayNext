@@ -156,9 +156,16 @@ Registro de la revisión y documentación del proyecto con IA, organizado por et
 - La asignación exacta de tokens semánticos: Indigo-600 para `Primary`, Slate-100 para `Secondary` y el anillo accesible exterior para `Focus`.
 - La tabla de inventario de Atomic Design con la catalogación de elementos de Playnext.
 - Los 4 puntos de la auditoría ética sobre patrones engañosos aplicados a las pantallas del proyecto.
-
 ### Qué cambié
 - Se descartó presentar la auditoría ética en formato de tabla para evitar saturar el lienzo visualmente, adaptándola a una tarjeta de texto estructurada con viñetas.
 - Se adaptó el contenido textual de la variante secundaria a `← Volver a la recomendación` para mantener coherencia estricta con las decisiones descritas en la auditoría ética.
+
+08/11/2026 · Construcción del Sistema de Componentes, Ensamblaje Atómico y Validación de Modo Oscuro
+- Qué le pedí a la IA: Asistencia técnica para completar los componentes de la biblioteca (Paso 7), resolver errores de desbordamiento en Auto Layout (botón fuera del contenedor y textos cortados), empaquetar el bloque de compra y el organismo de la tarjeta de recomendación a 2 columnas con tokens, y auditar el funcionamiento del modo oscuro a través de las variables semánticas.
+- Qué me devolvió: Guías paso a paso de Auto Layout para resolver desbordamientos forzando `Hug contents` y `Fill container`, instrucciones para tokenizar la cabecera (Navbar), el bloque de decisión de compra (`Split Action Bar`) y el organismo `Card/Game Recommendation`, la indicación para localizar el conmutador de modos de variable en el panel de Apariencia de Figma y la verificación de accesibilidad visual en modo oscuro.
+- Qué conservé: La arquitectura basada en Atomic Design (átomos para botones y chips; moléculas para navbar y bloque de compra; organismo para la tarjeta de recomendación); la asignación estricta de tokens de espaciado (`spacing/1` a `spacing/6`), radios de esquina (`radius/sm`, `radius/md`, `radius/full`) y elevaciones (`elevation/level-1`); y la prueba en un lienzo de test a 1280 × 800 px para validar que el cambio de Light a Dark no rompiera contrastes ni jerarquías visuales.
+- Qué cambié: Ajusté el uso tipográfico del bloque de compra utilizando `typography/label-md · 12/16` en lugar de una variante inexistente (`body-sm`) para ceñirme a mis 8 estilos oficiales; corregí el valor por defecto de la propiedad de texto en el bloque de compra para mantener el dato real `39,99 €` en lugar del término genérico `Price`; y redimensioné el marco de la columna izquierda de la tarjeta a `Hug contents` para evitar que la sinopsis del juego quedara truncada por debajo del contenedor.
+
+
 
 
