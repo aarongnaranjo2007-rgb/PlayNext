@@ -3,7 +3,7 @@
 ## Enlaces
 | Qué | Enlace |
 |---|---|
-| Archivo de Figma (versión "Entrega Órbita 2") (https://www.figma.com/design/USQdWFRuLuWW6z78DrRSHk/Plantilla-para-iniciar-proyectos--Community-?node-id=0-1&t=HH2TzeoEcNWjjBkL-1) |
+| Archivo de Figma (versión "Entrega Órbita 2") | (https://www.figma.com/design/USQdWFRuLuWW6z78DrRSHk/Plantilla-para-iniciar-proyectos--Community-?node-id=0-1&t=HH2TzeoEcNWjjBkL-1) |
 | Prototipo (enlace que empieza por `figma.com/proto/`) | (https://www.figma.com/proto/USQdWFRuLuWW6z78DrRSHk/Plantilla-para-iniciar-proyectos--Community-?node-id=869-709&p=f&t=M93Ulv409jmJ171J-1&scaling=min-zoom&content-scaling=fixed&page-id=680%3A203&starting-point-node-id=869%3A709) |
 | Proyecto de Google Stitch | https://stitch.withgoogle.com/projects/17416736062784526189  |
 
