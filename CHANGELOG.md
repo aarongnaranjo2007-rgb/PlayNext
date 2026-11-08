@@ -137,4 +137,28 @@ Registro de la revisión y documentación del proyecto con IA, organizado por et
 - **Qué conservé:** El uso de Plus Jakarta Sans como familia única de Google Fonts, la tabla de correspondencia semántica que explica cómo el sistema sustituye el estilo nativo del navegador y el planteamiento del test de ampliación al 200 % con Auto Layout.
 - **Qué cambié:** Unifiqué el peso del logotipo a Semi-Bold (600) para ceñirme de forma estricta a solo dos archivos de descarga (400 y 600) según las pautas WSG; corregí los textos de ejemplo para utilizar exclusivamente los copys reales de mis pantallas rediseñadas (Inicio, Preferencias, Recomendación y Ficha); y fusioné la fila duplicada de `body-md` en la tabla HTML para agrupar párrafos `<p>` y enlaces `<a>` bajo el mismo token visual.
 
+## 08/11/2026 · Paso 6: Iconografía, componentes y auditoría ética
+
+### Qué pedí
+- Consulta sobre la corrección visual del componente de botón en Figma (eliminación del recuadro del icono y ajuste de la altura a 56 px con Auto Layout).
+- Verificación de la nomenclatura de variantes (`Primary`, `Secondary`, `Focus`) para resolver avisos de capas no válidas en Figma.
+- Revisión de la correspondencia de tokens semánticos en modo claro para las variantes del botón (`color/primary`, `color/secondary-container`, `color/outline-variant`).
+- Asistencia en la estructuración de la documentación del Paso 6: desglose del inventario de Atomic Design y redacción de la auditoría preventiva de patrones engañosos (Dark Patterns).
+
+### Qué me devolvió
+- Indicaciones técnicas para desacoplar el trazo del contenedor del icono SVG y reajustar los paddings verticales para fijar la altura en 56 px.
+- Especificación de códigos HEX exactos a partir de la tabla de tokens del proyecto para aplicar a cada estado del botón.
+- Propuesta de estructura para el inventario de componentes clasificado por niveles atómicos (átomos, moléculas y organismos) y patrones conocidos.
+- Criterios de diseño ético centrados en evitar FOMO, opciones preseleccionadas y asimetría de navegación para la auditoría de la interfaz.
+
+### Qué conservé
+- La resolución técnica para limpiar el trazo del icono y la estructura de 3 variantes dentro del conjunto de componentes `Button`.
+- La asignación exacta de tokens semánticos: Indigo-600 para `Primary`, Slate-100 para `Secondary` y el anillo accesible exterior para `Focus`.
+- La tabla de inventario de Atomic Design con la catalogación de elementos de Playnext.
+- Los 4 puntos de la auditoría ética sobre patrones engañosos aplicados a las pantallas del proyecto.
+
+### Qué cambié
+- Se descartó presentar la auditoría ética en formato de tabla para evitar saturar el lienzo visualmente, adaptándola a una tarjeta de texto estructurada con viñetas.
+- Se adaptó el contenido textual de la variante secundaria a `← Volver a la recomendación` para mantener coherencia estricta con las decisiones descritas en la auditoría ética.
+
 
