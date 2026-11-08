@@ -43,7 +43,10 @@ Plus Jakarta Sans por su excelente legibilidad en pantalla y jerarquía en inter
 Escala base de 8 px (con token de 4 px para microespaciados). Retícula de escritorio de 12 columnas (1280 px) y retícula móvil para 360 px.
 
 ### Componentes
-Botones (variantes primario, secundario, estados hover/default), tarjetas modulares, selectores y chips interactivos construidos íntegramente con Auto Layout.
+Organizados por niveles de Atomic Design:
+- **Átomos:** Iconos (`arrow-left`, `star`, `gamepad-2`, `arrow-right`), `Chip` (variantes de estado seleccionado y por defecto) y `Button` (variantes primaria y secundaria con estados normal, hover, foco, pulsado y desactivado).
+- **Moléculas:** `Factor Clave` (icono + título + descripción) y `Bloque Compra` (precio + plataforma + CTA primario).
+- **Organismos:** `Header` (marca y navegación) y `Card/Game Recommendation` (tarjeta completa de resultado con imagen, metadatos y factores de afinidad).
 
 ### Responsive y modo oscuro
 Al adaptar la Home a 360 px se simplificó la cabecera, se ajustaron anchos a `Fill container` y los accesos rápidos pasaron a apilado vertical cumpliendo áreas táctiles mínimas de 44 px. En modo oscuro los tokens semánticos invierten las superficies sin pérdida de contraste.
