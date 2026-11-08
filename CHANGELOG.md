@@ -166,6 +166,21 @@ Registro de la revisión y documentación del proyecto con IA, organizado por et
 - Qué conservé: La arquitectura basada en Atomic Design (átomos para botones y chips; moléculas para navbar y bloque de compra; organismo para la tarjeta de recomendación); la asignación estricta de tokens de espaciado (`spacing/1` a `spacing/6`), radios de esquina (`radius/sm`, `radius/md`, `radius/full`) y elevaciones (`elevation/level-1`); y la prueba en un lienzo de test a 1280 × 800 px para validar que el cambio de Light a Dark no rompiera contrastes ni jerarquías visuales.
 - Qué cambié: Ajusté el uso tipográfico del bloque de compra utilizando `typography/label-md · 12/16` en lugar de una variante inexistente (`body-sm`) para ceñirme a mis 8 estilos oficiales; corregí el valor por defecto de la propiedad de texto en el bloque de compra para mantener el dato real `39,99 €` en lugar del término genérico `Price`; y redimensioné el marco de la columna izquierda de la tarjeta a `Hug contents` para evitar que la sinopsis del juego quedara truncada por debajo del contenedor.
 
+## 08/11/2026 · Paso 8: Construcción de mockups, diseño responsive, modo oscuro y cierre de entrega
 
+### Uso de IA (Gemini) — Auditoría de mockups del happy path (`02_Preferencias`, `03_Recomendación` y `04_Ficha del juego`)
+- **Qué le pedí:** Revisar el estado de mis pantallas del happy path a partir de mis capturas de Figma y registros de capas para detectar errores de Auto Layout, desbordamientos respecto al alto de 800 px, textos o componentes duplicados y colores o espaciados sin vincular a variables semánticas.
+- **Qué me devolvió:** 
+  1. En `02_Preferencias`: indicaciones para ampliar la columna central (de 348 px a 596 px) y reducir paddings para evitar que el botón inferior se saliera del marco de 800 px, además de sustituir la fuente Inter remanente por Plus Jakarta Sans y corregir la opción duplicada en el selector de modalidad.
+  2. En `03_Recomendación`: aviso sobre el corte inferior de la botonera, el uso de un color negro fijo en el botón primario en vez de `color/primary`, tres trazos sueltos en los iconos y la repetición del mismo texto en los 3 factores clave.
+  3. En `04_Ficha del juego`: pautas para hacer visibles los marcadores de posición de la galería, sustituir la tarjeta duplicada de datos técnicos de la columna derecha por el bloque de requisitos y corregir la etiqueta del enlace inferior de retorno.
+- **Qué conservé:** Las correcciones de Auto Layout (`Fill container` y ajuste de gaps con tokens `spacing/3` y `spacing/4`), la vinculación del 100 % de rellenos y trazos a variables semánticas (`color/primary`, `color/outline-variant`, `color/surface-container`) y la estructuración de las dos columnas sobre la retícula de 12 columnas.
+- **Qué cambié:** Ajusté manualmente en Figma las dimensiones de las cajas de marcadores de posición de la galería, redacté e integré los textos definitivos de cada factor de recomendación y requisitos según mi wireframe rediseñado, y decidí mantener los niveles de la escala tipográfica aplicados en pantalla documentando su correspondencia en la guía.
+
+### Uso de IA (Gemini) — Adaptación al segundo ancho móvil (360 × 800 px) y prototipo
+- **Qué le pedí:** Cómo solucionar el desbordamiento de los textos y botones al duplicar la pantalla principal `01_Home` al ancho móvil de 360 × 800 px, y cómo estructurar el resumen de entrega en `ORBITA2.md`.
+- **Qué me devolvió:** Instrucciones para ocultar los enlaces secundarios de navegación en móvil, cambiar el contenedor Hero y los textos a `Fill container`, apilar en vertical los botones de acceso rápido asegurando una altura mínima táctil de 44 px, y una plantilla base para `ORBITA2.md`.
+- **Qué conservé:** La configuración de Auto Layout vertical para los botones en 360 px, el ajuste de anchos a `Fill container` para evitar desbordamientos horizontales y la estructura del documento de entrega.
+- **Qué cambié:** Reajusté por mi cuenta la alineación vertical del bloque Hero en el marco móvil, configuré manualmente los enlaces interactivos del prototipo (`figma.com/proto/`) entre las cuatro pantallas y completé los enlaces y comprobaciones reales de mi archivo de Figma en el repositorio.
 
 
