@@ -4,7 +4,8 @@
   "description": "Proyecto individual de Diseño de Interfaces Web: investigación, arquitectura de la información y prototipo de PlayNext.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint js/"
   },
   "repository": {
     "type": "git",
