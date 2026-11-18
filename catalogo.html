@@ -19,24 +19,115 @@
     <main>
         <h1>Catálogo de juegos</h1>
 
-        <h2>FILTRO DE BUSQUEDA:</h2>
+        <h2>Filtros de búsqueda:</h2>
         <form id="filtro">
             <fieldset>
-                <legend>Modo de juego:</legend>
+                <legend>Modo de juego</legend>
                 <ul>
                     <li>
-                        <input type="checkbox" name="solo" id="jugar-solo">
-                        <label for="jugar-solo">Jugar solo</label>
+                        <input type="checkbox" name="modo" value="solo" id="modo-solo">
+                        <label for="modo-solo">Jugar solo</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="amigos" id="jugar-amigos">
-                        <label for="jugar-amigos">Jugar con amigos</label>
+                        <input type="checkbox" name="modo" value="grupo" id="modo-grupo">
+                        <label for="modo-grupo">Jugar con amigos</label>
                     </li>
+                </ul>
             </fieldset>
 
-        </form>
-    </main>
+            <fieldset>
+                <legend>Jugadores</legend>
+                <label for="jugadores">Número de jugadores</label>
+                <input type="number" name="jugadores" id="jugadores" min="1" max="8">
+            </fieldset>
 
+            
+            <fieldset>
+                <legend>Tiempo disponible</legend>
+                <ul>
+                    <li>
+                        <input type="radio" name="tiempo" id="tiempo-cualquiera" value="cualquiera" checked>
+                        <label for="tiempo-cualquiera">Cualquiera</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="tiempo" id="tiempo-corta" value="corta">
+                        <label for="tiempo-corta">Menos de 45 min</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="tiempo" id="tiempo-media" value="media">
+                        <label for="tiempo-media">1-2 horas</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="tiempo" id="tiempo-larga" value="larga">
+                        <label for="tiempo-larga">Más de 2 horas</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Plataforma</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="plataforma" id="plataforma-pc" value="pc">
+                        <label for="plataforma-pc">PC</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="plataforma" id="plataforma-playstation" value="playstation">
+                        <label for="plataforma-playstation">PlayStation</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="plataforma" id="plataforma-xbox" value="xbox">
+                        <label for="plataforma-xbox">Xbox</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Géneros</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="genero" id="genero-accion" value="accion">
+                        <label for="genero-accion">Acción</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="genero" id="genero-roguelike" value="roguelike">
+                        <label for="genero-roguelike">Roguelike</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="genero" id="genero-cooperativo" value="cooperativo">
+                        <label for="genero-cooperativo">Cooperativo</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="genero" id="genero-estrategia" value="estrategia">
+                        <label for="genero-estrategia">Estrategia</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="genero" id="genero-rol" value="rol">
+                        <label for="genero-rol">Rol/RPG</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="genero" id="genero-fps" value="fps">
+                        <label for="genero-fps">FPS</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <button type="reset">Limpiar filtros</button>
+        </form>
+
+        <section>
+            <h2>Resultados</h2>
+            <p id="contador-juegos"></p>
+
+            <label for="orden">Ordenar por</label>
+            <select name="orden" id="orden">
+                <option value="valoracion">Valoración</option>
+                <option value="titulo">Título</option>
+            </select>
+
+            <ul id="listado-juegos"></ul>
+        </section>
+    </main>
     <script type="module" src="js/main.js"></script>
 </body>
 </html>
