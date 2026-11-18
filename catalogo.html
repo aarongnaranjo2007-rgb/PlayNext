@@ -17,7 +17,26 @@
         </nav>
     </header>
     <main>
-        <h1>Catálogo</h1>
+        <h1>Catálogo de juegos</h1>
+
+        <h2>FILTRO DE BUSQUEDA:</h2>
+        <form id="filtro">
+            <fieldset>
+                <legend>Modo de juego:</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="solo" id="jugar-solo">
+                        <label for="jugar-solo">Jugar solo</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="amigos" id="jugar-amigos">
+                        <label for="jugar-amigos">Jugar con amigos</label>
+                    </li>
+            </fieldset>
+
+        </form>
     </main>
+
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
