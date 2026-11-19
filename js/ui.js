@@ -30,3 +30,10 @@ export function pintarListado(listaJuegos){
         lista.appendChild(crearTarjeta(juego));
     }
 }
+
+export function pintarContador(total){
+    const contador = document.querySelector("#contador-juegos");
+    contador.textContent = total + " juegos";
+
+
+}
