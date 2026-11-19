@@ -1,5 +1,4 @@
 import { juegos, generos } from "./datos.js";
-import { crearTarjeta } from "./ui.js";
+import { pintarListado } from "./ui.js";
 
-const lista = document.querySelector("#listado-juegos");
-lista.appendChild(crearTarjeta(juegos[0]));
+pintarListado(juegos)

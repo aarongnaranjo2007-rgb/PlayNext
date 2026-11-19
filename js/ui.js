@@ -21,4 +21,12 @@ export function crearTarjeta(juego){
     li.appendChild(articulo);
 
     return li;
-};
+}
+
+export function pintarListado(listaJuegos){
+    const lista = document.querySelector("#listado-juegos");
+
+    for (const juego of listaJuegos) {
+        lista.appendChild(crearTarjeta(juego));
+    }
+}
