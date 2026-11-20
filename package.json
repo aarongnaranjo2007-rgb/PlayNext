@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint js/",
-    "sass": "sass scss/main.scss css/main.css",
-    "sass:watch": "sass --watch scss/main.scss css/main.css"
+    "sass": "sass --no-source-map scss/main.scss css/main.css",
+    "sass:watch": "sass --no-source-map --watch scss/main.scss css/main.css"
   },
   "repository": {
     "type": "git",
