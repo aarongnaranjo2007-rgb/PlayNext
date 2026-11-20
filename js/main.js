@@ -1,5 +1,7 @@
 import { juegos, generos } from "./datos.js";
-import { pintarListado, pintarContador, hayListado, pintarFicha, hayListado } from "./ui.js";
+import { pintarListado, pintarContador, hayListado, hayFicha, pintarFicha, iniciarModal } from "./ui.js";
+
+iniciarModal();
 
 if (hayListado()) {
     pintarListado(juegos, generos);

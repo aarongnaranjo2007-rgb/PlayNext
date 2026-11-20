@@ -138,3 +138,49 @@ export function hayFicha(){
         return false;
     }
 }
+
+function crearElemento(etiqueta, texto){
+    const elemento = document.createElement(etiqueta);
+    elemento.textContent = texto;
+    return elemento;
+}
+
+export function iniciarModal(){
+    const dialogo = document.createElement("dialog");
+
+    const titulo = crearElemento("h2", "Sobre PlayNext");
+
+    const cerrar = crearElemento("button", "Cerrar");
+    cerrar.type = "button";
+
+    const queEs = crearElemento("h3", "¿Qué es PlayNext?");
+    const queEsTexto = crearElemento("p", "Una herramienta pensada para eliminar la indecisión al elegir videojuego, tanto si juegas en solitario como si buscas plan con amigos.");
+
+    const comoFunciona = crearElemento("h3", "¿Cómo funciona el recomendador?");
+    const puntos = [
+        "Filtrado rápido: encuentra juegos según tiempo, modo, plataforma y género.",
+        "Datos locales: de momento trabaja con un catálogo propio de juegos de ejemplo.",
+        "Recomendaciones directas: sin cuentas obligatorias ni pasos innecesarios."
+    ];
+    const lista = document.createElement("ul");
+    for (const punto of puntos) {
+        lista.appendChild(crearElemento("li", punto));
+    }
+
+    const entendido = crearElemento("button", "Entendido");
+    entendido.type = "button";
+
+    dialogo.appendChild(titulo);
+    dialogo.appendChild(cerrar);
+    dialogo.appendChild(queEs);
+    dialogo.appendChild(queEsTexto);
+    dialogo.appendChild(comoFunciona);
+    dialogo.appendChild(lista);
+    dialogo.appendChild(entendido);
+    document.body.appendChild(dialogo);
+
+    const abrir = document.querySelector("header button");
+    abrir.addEventListener("click", () => dialogo.showModal());
+    cerrar.addEventListener("click", () => dialogo.close());
+    entendido.addEventListener("click", () => dialogo.close());
+}
