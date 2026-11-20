@@ -48,3 +48,12 @@ export function pintarContador(total){
     const contador = document.querySelector("#contador-juegos");
     contador.textContent = total + " juegos";
 }
+
+export function hayListado(){
+    const lista = document.querySelector("#listado-juegos");
+    if (lista){
+        return true;
+    }else{
+        return false;
+    }
+}
