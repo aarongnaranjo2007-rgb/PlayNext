@@ -60,7 +60,7 @@ export function hayListado(){
 
 export function pintarFicha(juego, generos){
     const ficha = document.querySelector("#ficha");
-    
+
     if (!juego) {
         const aviso = document.createElement("h1");
         aviso.textContent = "Juego no encontrado";
@@ -128,4 +128,13 @@ export function pintarFicha(juego, generos){
     ficha.appendChild(espacio);
     ficha.appendChild(tituloRequisitos);
     ficha.appendChild(requisitos);
+}
+
+export function hayFicha(){
+    const ficha = document.querySelector("#ficha");
+    if (ficha){
+        return true;
+    }else{
+        return false;
+    }
 }
