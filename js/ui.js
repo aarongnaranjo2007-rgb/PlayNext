@@ -86,10 +86,47 @@ export function pintarFicha(juego, generos){
     const precio = document.createElement("p");
     precio.textContent = juego.precio + " € en " + juego.tienda;
 
+        const tecnicos = document.createElement("h2");
+    tecnicos.textContent = "Datos técnicos";
+
+    const jugadores = document.createElement("p");
+    jugadores.textContent = "Jugadores: " + juego.jugadoresMin + " a " + juego.jugadoresMax;
+
+    const plataforma = document.createElement("p");
+    plataforma.textContent = "Plataforma: " + juego.plataformaTexto;
+
+    const compatibilidad = document.createElement("p");
+    compatibilidad.textContent = "Compatibilidad: " + juego.compatibilidad;
+
+    const modos = document.createElement("p");
+    modos.textContent = "Modos: " + juego.modos;
+
+    const espacio = document.createElement("p");
+    espacio.textContent = "Espacio: " + juego.espacio;
+
+    const tituloRequisitos = document.createElement("h2");
+    tituloRequisitos.textContent = "Requisitos y detalles";
+
+    const requisitos = document.createElement("ul");
+    for (const requisito of juego.requisitos) {
+        const item = document.createElement("li");
+        item.textContent = requisito;
+        requisitos.appendChild(item);
+    }
+
+
     ficha.appendChild(titulo);
     ficha.appendChild(valoracion);
     ficha.appendChild(listaGeneros);
     ficha.appendChild(duracion);
     ficha.appendChild(sinopsis);
     ficha.appendChild(precio);
+    ficha.appendChild(tecnicos);
+    ficha.appendChild(jugadores);
+    ficha.appendChild(plataforma);
+    ficha.appendChild(compatibilidad);
+    ficha.appendChild(modos);
+    ficha.appendChild(espacio);
+    ficha.appendChild(tituloRequisitos);
+    ficha.appendChild(requisitos);
 }
