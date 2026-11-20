@@ -60,7 +60,7 @@ export function hayListado(){
 
 export function pintarFicha(juego, generos){
     const ficha = document.querySelector("#ficha");
-
+    
     if (!juego) {
         const aviso = document.createElement("h1");
         aviso.textContent = "Juego no encontrado";
@@ -86,7 +86,7 @@ export function pintarFicha(juego, generos){
     const precio = document.createElement("p");
     precio.textContent = juego.precio + " € en " + juego.tienda;
 
-        const tecnicos = document.createElement("h2");
+    const tecnicos = document.createElement("h2");
     tecnicos.textContent = "Datos técnicos";
 
     const jugadores = document.createElement("p");
@@ -113,7 +113,6 @@ export function pintarFicha(juego, generos){
         item.textContent = requisito;
         requisitos.appendChild(item);
     }
-
 
     ficha.appendChild(titulo);
     ficha.appendChild(valoracion);
