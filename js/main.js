@@ -1,5 +1,5 @@
 import { juegos, generos } from "./datos.js";
-import { pintarListado, pintarContador, hayListado } from "./ui.js";
+import { pintarListado, pintarContador, hayListado, pintarFicha } from "./ui.js";
 
 if (hayListado()){
     pintarListado(juegos, generos);
@@ -7,6 +7,5 @@ if (hayListado()){
 } else {
     const id = location.search.slice(4);
     const juego = juegos.find(j => j.id === id);
-    console.log(juego);
-
+    pintarFicha(juego, generos)
 }

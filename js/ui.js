@@ -57,3 +57,39 @@ export function hayListado(){
         return false;
     }
 }
+
+export function pintarFicha(juego, generos){
+    const ficha = document.querySelector("#ficha");
+
+    if (!juego) {
+        const aviso = document.createElement("p");
+        aviso.textContent = "Juego no encontrado";
+        ficha.appendChild(aviso);
+        return;
+    }
+
+    const titulo = document.createElement("h1");
+    titulo.textContent = juego.titulo;
+
+    const valoracion = document.createElement("p");
+    valoracion.textContent = juego.valoracion + " / 5";
+
+    const listaGeneros = document.createElement("p");
+    listaGeneros.textContent = nombresGeneros(juego, generos);
+
+    const duracion = document.createElement("p");
+    duracion.textContent = juego.duracionTexto;
+
+    const sinopsis = document.createElement("p");
+    sinopsis.textContent = juego.sinopsis;
+
+    const precio = document.createElement("p");
+    precio.textContent = juego.precio + " € en " + juego.tienda;
+
+    ficha.appendChild(titulo);
+    ficha.appendChild(valoracion);
+    ficha.appendChild(listaGeneros);
+    ficha.appendChild(duracion);
+    ficha.appendChild(sinopsis);
+    ficha.appendChild(precio);
+}
