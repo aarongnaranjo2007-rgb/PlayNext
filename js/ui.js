@@ -62,7 +62,7 @@ export function pintarFicha(juego, generos){
     const ficha = document.querySelector("#ficha");
 
     if (!juego) {
-        const aviso = document.createElement("p");
+        const aviso = document.createElement("h1");
         aviso.textContent = "Juego no encontrado";
         ficha.appendChild(aviso);
         return;

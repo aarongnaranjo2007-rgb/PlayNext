@@ -7,5 +7,5 @@ if (hayListado()){
 } else {
     const id = location.search.slice(4);
     const juego = juegos.find(j => j.id === id);
-    pintarFicha(juego, generos)
+    pintarFicha(juego, generos);
 }
