@@ -1,5 +1,14 @@
 const EDAD_MINIMA = 14;
 
+export const reglasRegistro = {
+    usuario: campos => validarUsuario(campos.usuario.value),
+    correo: campos => validarEmail(campos.correo.value),
+    password: campos => validarPassword(campos.password.value),
+    repetir: campos => validarRepetirPassword(campos.repetir.value, campos.password.value),
+    nacimiento: campos => validarFechaNacimiento(campos.nacimiento.value),
+    acepto: campos => validarAceptar(campos.acepto.checked)
+};
+
 export function validarObligatorio(valor) {
     if (valor.trim() === "") {
         return "Este campo es obligatorio.";
@@ -96,3 +105,4 @@ export function validarLongitud(valor, minimo, maximo) {
     }
     return null;
 }
+

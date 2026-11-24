@@ -1,3 +1,5 @@
+import { validarObligatorio } from "./validacion.js";
+
 function nombresGeneros(juego, generos) {
     const nombres = juego.generoIds.map(id => {
         const genero = generos.find(g => g.id === id);
@@ -194,4 +196,73 @@ export function limpiarError(campo){
     const aviso = document.querySelector("#error-" + campo.id);
     aviso.textContent = "";
     campo.removeAttribute("aria-invalid");
+}
+
+function validarCampo(formulario, reglas, nombre) {
+    const campo = formulario.elements[nombre];
+    let error = null;
+
+    if (campo.required && campo.type !== "checkbox") {
+        error = validarObligatorio(campo.value);
+    }
+    if (error === null) {
+        error = reglas[nombre](formulario.elements);
+    }
+
+    if (error === null) {
+        limpiarError(campo);
+        return true;
+    }
+    mostrarError(campo, error);
+    return false;
+}
+
+function validarFormulario(formulario, reglas) {
+    let primerCampoConError = null;
+
+    for (const nombre in reglas) {
+        const valido = validarCampo(formulario, reglas, nombre);
+        if (!valido && primerCampoConError === null) {
+            primerCampoConError = formulario.elements[nombre];
+        }
+    }
+
+    if (primerCampoConError !== null) {
+        primerCampoConError.focus();
+        return false;
+    }
+    return true;
+}
+
+function activarValidacion(formulario, reglas) {
+    for (const nombre in reglas) {
+        const campo = formulario.elements[nombre];
+
+        campo.addEventListener("blur", () => {
+            campo.dataset.tocado = "true";
+            validarCampo(formulario, reglas, nombre);
+        });
+
+        campo.addEventListener("input", () => {
+            if (campo.dataset.tocado === "true") {
+                validarCampo(formulario, reglas, nombre);
+            }
+        });
+    }
+}
+
+export function iniciarFormulario(idFormulario, reglas, alEnviar) {
+    const formulario = document.querySelector("#" + idFormulario);
+    if (formulario === null) {
+        return;
+    }
+
+    activarValidacion(formulario, reglas);
+
+    formulario.addEventListener("submit", evento => {
+        evento.preventDefault();
+        if (validarFormulario(formulario, reglas)) {
+            alEnviar(formulario);
+        }
+    });
 }
