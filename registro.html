@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro · PlayNext</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">PlayNext</a>
+        <nav>
+            <ul>
+                <li><a href="catalogo.html">Explorar Catálogo</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><button type="button">Sobre el Proyecto</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Registro</h1>
+        <form id="form-registro" novalidate>
+            <input type="hidden" name="id" id="usuario-id">
+
+            <fieldset>
+                <legend>Datos de la cuenta</legend>
+                <ul>
+                    <li>
+                        <label for="usuario">Nombre de usuario</label>
+                        <input type="text" id="usuario" name="usuario" required maxlength="20" aria-describedby="error-usuario">
+                        <span id="error-usuario"></span>
+                    </li>
+                    <li>
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" required aria-describedby="error-correo">
+                        <span id="error-correo"></span>
+                    </li>
+                    <li>
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" required aria-describedby="error-password">
+                        <span id="error-password"></span>
+                    </li>
+                    <li>
+                        <label for="repetir">Repetir contraseña</label>
+                        <input type="password" id="repetir" name="repetir" required aria-describedby="error-repetir">
+                        <span id="error-repetir"></span>
+                    </li>
+                    <li>
+                        <label for="nacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="nacimiento" name="nacimiento" required aria-describedby="error-nacimiento">
+                        <span id="error-nacimiento"></span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="acepto" name="acepto" required aria-describedby="error-acepto">
+                        <label for="acepto">Acepto las condiciones</label>
+                        <span id="error-acepto"></span>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <p>
+                <button type="submit">Guardar</button>
+                <button type="button" id="cancelar">Cancelar</button>
+            </p>
+        </form>
+
+        <section>
+            <h2>Usuarios</h2>
+            <ul id="lista-usuarios"></ul>
+        </section>
+       
+    </main>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

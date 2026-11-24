@@ -184,3 +184,14 @@ export function iniciarModal(){
     cerrar.addEventListener("click", () => dialogo.close());
     entendido.addEventListener("click", () => dialogo.close());
 }
+export function mostrarError(campo, mensaje){
+    const aviso = document.querySelector("#error-" + campo.id);
+    aviso.textContent = mensaje;
+    campo.setAttribute("aria-invalid", "true");
+}
+
+export function limpiarError(campo){
+    const aviso = document.querySelector("#error-" + campo.id);
+    aviso.textContent = "";
+    campo.removeAttribute("aria-invalid");
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto · PlayNext</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">PlayNext</a>
+        <nav>
+            <ul>
+                <li><a href="catalogo.html">Explorar Catálogo</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><button type="button">Sobre el Proyecto</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contacto</h1>
+
+        <form id="form-contacto" novalidate>
+            <fieldset>
+                <legend>Tu consulta</legend>
+                <ul>
+                    <li>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required maxlength="40"
+                            aria-describedby="error-nombre">
+                        <span id="error-nombre"></span>
+                    </li>
+                    <li>
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required aria-describedby="error-email">
+                        <span id="error-email"></span>
+                    </li>
+                    <li>
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input type="tel" id="telefono" name="telefono" aria-describedby="error-telefono">
+                        <span id="error-telefono"></span>
+                    </li>
+                    <li>
+                        <label for="motivo">Motivo</label>
+                        <select id="motivo" name="motivo" required aria-describedby="error-motivo">
+                            <option value="">Elige un motivo</option>
+                            <option value="proponer-juego">Proponer un juego</option>
+                            <option value="error-datos">Error en los datos de un juego</option>
+                            <option value="sugerencia">Sugerencia de mejora</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <span id="error-motivo"></span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="llamar" name="llamar">
+                        <label for="llamar">Prefiero que me llaméis</label>
+                    </li>
+                    <li>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" required maxlength="500" rows="5"
+                            aria-describedby="error-mensaje"></textarea>
+                        <span id="contador-mensaje">0 / 500</span>
+                        <span id="error-mensaje"></span>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <p>
+                <button type="submit">Enviar</button>
+            </p>
+        </form>
+
+        <section>
+            <h2>Mensajes enviados</h2>
+            <ul id="lista-mensajes"></ul>
+        </section>
+    </main>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
