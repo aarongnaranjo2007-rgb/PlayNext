@@ -66,3 +66,43 @@ dialog {
     border: 1px solid #e2e8f0;
     border-radius: 12px;
 }
+
+form {
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 16px;
+    }
+
+    label {
+        display: block;
+    }
+
+    input[type="checkbox"] + label {
+        display: inline;
+    }
+
+    span[id^="error-"] {
+        display: block;
+        color: #b91c1c;
+        font-size: 0.9rem;
+    }
+
+    [aria-invalid="true"] {
+        border: 2px solid #b91c1c;
+    }
+}
+
+#lista-usuarios,
+#lista-mensajes {
+    padding: 0;
+    list-style: none;
+
+    li {
+        padding: 12px 0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+}

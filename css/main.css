@@ -63,3 +63,36 @@ dialog {
   border: 1px solid #e2e8f0;
   border-radius: 12px;
 }
+
+form ul {
+  padding: 0;
+  list-style: none;
+}
+form li {
+  margin-bottom: 16px;
+}
+form label {
+  display: block;
+}
+form input[type=checkbox] + label {
+  display: inline;
+}
+form span[id^=error-] {
+  display: block;
+  color: #b91c1c;
+  font-size: 0.9rem;
+}
+form [aria-invalid=true] {
+  border: 2px solid #b91c1c;
+}
+
+#lista-usuarios,
+#lista-mensajes {
+  padding: 0;
+  list-style: none;
+}
+#lista-usuarios li,
+#lista-mensajes li {
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
