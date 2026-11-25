@@ -221,6 +221,7 @@ function validarFormulario(formulario, reglas) {
     let primerCampoConError = null;
 
     for (const nombre in reglas) {
+        formulario.elements[nombre].dataset.tocado = "true";
         const valido = validarCampo(formulario, reglas, nombre);
         if (!valido && primerCampoConError === null) {
             primerCampoConError = formulario.elements[nombre];
