@@ -339,3 +339,21 @@ export function iniciarCancelar(idFormulario, idBoton) {
         }
     });
 }
+
+export function iniciarLista(idLista, alPulsar){
+    const lista = document.querySelector("#" + idLista);
+    if (!lista){
+        return;
+    }
+
+    lista.addEventListener("click", evento => {
+        const boton = evento.target;
+        if (boton.tagName === "BUTTON"){
+            alPulsar(boton.dataset.accion, boton.dataset.id);
+        }
+    });
+}
+
+export function confirmarBorrado(texto){
+    return confirm(texto);
+}
