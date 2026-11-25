@@ -47,11 +47,11 @@ Ordenado por prioridad. Primero la base, después el recorrido de la persona pri
 
 | # | Pieza | Cómo se prueba | Estado |
 |---|---|---|---|
-| 1 | Datos de juegos y géneros relacionados | `datos.js` exporta 12 juegos y 6 géneros; cada juego referencia sus géneros por `id`. | ✅ Hito 1 |
-| 2 | Menú de navegación común | Desde la cabecera de cualquier página se llega a Inicio, Catálogo, Registro y Contacto. | ✅ Hito 1 |
-| 3 | Listado de juegos en tarjetas | El catálogo muestra una tarjeta por juego generada desde JavaScript. | ✅ Hito 1 |
-| 4 | Ficha del juego | Al pulsar «Ver detalles» se abre la ficha con todos los datos del juego elegido. | ✅ Hito 1 |
-| 5 | Juego no encontrado | `ficha.html?id=inventado` muestra un aviso en lugar de un error. | ✅ Hito 1 |
+| 1 | Datos de juegos y géneros relacionados | `datos.js` exporta 12 juegos y 6 géneros; cada juego referencia sus géneros por `id`. |  Hito 1 |
+| 2 | Menú de navegación común | Desde la cabecera de cualquier página se llega a Inicio, Catálogo, Registro y Contacto. |  Hito 1 |
+| 3 | Listado de juegos en tarjetas | El catálogo muestra una tarjeta por juego generada desde JavaScript. |  Hito 1 |
+| 4 | Ficha del juego | Al pulsar «Ver detalles» se abre la ficha con todos los datos del juego elegido. |  Hito 1 |
+| 5 | Juego no encontrado | `ficha.html?id=inventado` muestra un aviso en lugar de un error. |  Hito 1 |
 | 6 | Formulario de preferencias individuales | Se pueden elegir tiempo, plataforma y géneros, y el formulario avisa si falta un dato obligatorio. | Pendiente |
 | 7 | Recomendación aleatoria | Al enviar las preferencias se muestra un juego al azar entre los compatibles. | Pendiente |
 | 8 | Motivos de la recomendación | La recomendación explica en tres puntos por qué encaja (tiempo, plataforma y género). | Pendiente |
@@ -63,18 +63,18 @@ Ordenado por prioridad. Primero la base, después el recorrido de la persona pri
 | 14 | Accesos directos de Inicio | «Jugar solo» y «Jugar con amigos» abren Preferencias con ese modo ya marcado. | Pendiente |
 | 15 | Sin juegos compatibles | Si ningún juego cumple las preferencias, se muestra un mensaje con una acción para continuar. | Pendiente |
 | 16 | Error de carga | Si los datos no cargan, se muestra un aviso con el botón «Reintentar». | Pendiente |
-| 17 | Contador de resultados | El catálogo muestra cuántos juegos hay en el listado. | ✅ Hito 1 |
+| 17 | Contador de resultados | El catálogo muestra cuántos juegos hay en el listado. |  Hito 1 |
 | 18 | Filtros del catálogo | Al marcar filtros, el listado y el contador muestran solo los juegos que los cumplen. | Pendiente |
 | 19 | Limpiar filtros | «Limpiar filtros» vuelve a mostrar todos los juegos. | Pendiente |
 | 20 | Ordenar el catálogo | El listado se puede ordenar por valoración o por título. | Pendiente |
-| 21 | Ventana «Sobre el proyecto» | El botón de la cabecera abre la ventana, y «Entendido» o la X la cierran. | ✅ Hito 1 |
-| 22 | Almacenamiento local | `almacen.js` guarda, lee, actualiza y borra colecciones en `localStorage`; los datos siguen al recargar. | ✅ Hito 2 |
-| 23 | Registro con validación | El formulario de registro muestra un error junto a cada campo incorrecto y no guarda hasta que todo es válido. | ✅ Hito 2 |
-| 24 | Lista de usuarios | La vista «Usuarios» muestra los registrados; «Editar» rellena el formulario y «Borrar» pide confirmación. | ✅ Hito 2 |
-| 25 | Contacto con validación | El formulario de contacto valida cada campo; si se marca «Prefiero que me llaméis», el teléfono es obligatorio. | ✅ Hito 2 |
-| 26 | Contador de caracteres | El contador del mensaje cambia al escribir y vuelve a 0 al enviar. | ✅ Hito 2 |
-| 27 | Mensajes enviados | Los mensajes enviados aparecen en la lista y se pueden borrar con confirmación. | ✅ Hito 2 |
-| 28 | Recordar los datos de contacto | Tras enviar un mensaje, al volver a Contacto el nombre y el correo aparecen rellenados. | ✅ Hito 2 |
+| 21 | Ventana «Sobre el proyecto» | El botón de la cabecera abre la ventana, y «Entendido» o la X la cierran. |  Hito 1 |
+| 22 | Almacenamiento local | `almacen.js` guarda, lee, actualiza y borra colecciones en `localStorage`; los datos siguen al recargar. |  Hito 2 |
+| 23 | Registro con validación | El formulario de registro muestra un error junto a cada campo incorrecto y no guarda hasta que todo es válido. |  Hito 2 |
+| 24 | Lista de usuarios | La vista «Usuarios» muestra los registrados; «Editar» rellena el formulario y «Borrar» pide confirmación. |  Hito 2 |
+| 25 | Contacto con validación | El formulario de contacto valida cada campo; si se marca «Prefiero que me llaméis», el teléfono es obligatorio. |  Hito 2 |
+| 26 | Contador de caracteres | El contador del mensaje cambia al escribir y vuelve a 0 al enviar. |  Hito 2 |
+| 27 | Mensajes enviados | Los mensajes enviados aparecen en la lista y se pueden borrar con confirmación. |  Hito 2 |
+| 28 | Recordar los datos de contacto | Tras enviar un mensaje, al volver a Contacto el nombre y el correo aparecen rellenados. |  Hito 2 |
 
 ## Hito 2: formularios, validación y almacenamiento
 
