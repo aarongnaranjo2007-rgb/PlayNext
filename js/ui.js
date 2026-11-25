@@ -396,3 +396,46 @@ export function iniciarContador(idCampo, idContador){
         contador.textContent = "0 / " + campo.maxLength;
     });
 }
+
+export function leerMensaje(formulario){
+    const campos = formulario.elements;
+    return {
+        nombre: campos.nombre.value.trim(),
+        email: campos.email.value.trim(),
+        telefono: campos.telefono.value.trim(),
+        motivo: campos.motivo.value,
+        llamar: campos.llamar.checked,
+        mensaje: campos.mensaje.value.trim(),
+        fecha: new Date().toISOString()
+    };
+}
+
+export function pintarMensajes(mensajes, motivos){
+    const lista = document.querySelector("#lista-mensajes");
+    if (!lista){
+        return;
+    }
+
+    lista.textContent = "";
+
+    if (mensajes.length === 0){
+        lista.appendChild(crearElemento("li", "Todavía no has enviado ningún mensaje."));
+        return;
+    }
+
+    for (const mensaje of mensajes){
+        const item = document.createElement("li");
+        const cabecera = crearElemento("p", mensaje.nombre + " · " + motivos[mensaje.motivo]);
+        const texto = crearElemento("p", mensaje.mensaje);
+
+        const borrar = crearElemento("button", "Borrar");
+        borrar.type = "button";
+        borrar.dataset.accion = "borrar";
+        borrar.dataset.id = mensaje.id;
+
+        item.appendChild(cabecera);
+        item.appendChild(texto);
+        item.appendChild(borrar);
+        lista.appendChild(item);
+    }
+}

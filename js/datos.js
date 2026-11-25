@@ -309,3 +309,10 @@ export const juegos = [
         portada: "img/divinity-original-sin-2.jpg"
     }
 ];
+
+export const motivos = {
+    "proponer-juego": "Proponer un juego",
+    "error-datos": "Error en los datos de un juego",
+    "sugerencia": "Sugerencia de mejora",
+    "otro": "Otro"
+};
