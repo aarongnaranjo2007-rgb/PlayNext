@@ -1,12 +1,20 @@
 const EDAD_MINIMA = 14;
 
 export const reglasRegistro = {
-    usuario: campos => validarUsuario(campos.usuario.value),
+    usuario: campos => validarNombre(campos.usuario.value),
     correo: campos => validarEmail(campos.correo.value),
     password: campos => validarPassword(campos.password.value),
     repetir: campos => validarRepetirPassword(campos.repetir.value, campos.password.value),
     nacimiento: campos => validarFechaNacimiento(campos.nacimiento.value),
     acepto: campos => validarAceptar(campos.acepto.checked)
+};
+
+export const reglasContacto = {
+    nombre: campos => validarNombre(campos.nombre.value),
+    email: campos => validarEmail(campos.email.value),
+    telefono: campos => validarTelefonoLlamada(campos.telefono.value, campos.llamar.checked),
+    motivo: () => null,
+    mensaje: campos => validarLongitud(campos.mensaje.value, campos.mensaje.minLength, campos.mensaje.maxLength)
 };
 
 export function validarObligatorio(valor) {
@@ -16,9 +24,9 @@ export function validarObligatorio(valor) {
     return null;
 }
 
-export function validarUsuario(valor) {
+export function validarNombre(valor) {
     if (valor.trim().length < 3) {
-        return "El nombre de usuario debe tener al menos 3 caracteres.";
+        return "El nombre debe tener al menos 3 caracteres.";
     }
     return null;
 }
@@ -104,5 +112,12 @@ export function validarLongitud(valor, minimo, maximo) {
         return "El mensaje no puede superar los " + maximo + " caracteres.";
     }
     return null;
+}
+
+export function validarTelefonoLlamada(telefono, llamar){
+    if (llamar && telefono.trim() === ""){
+        return "Indica un teléfono para que podamos llamarte.";
+    }
+    return validarTelefono(telefono);
 }
 

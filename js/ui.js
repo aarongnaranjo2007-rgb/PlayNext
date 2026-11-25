@@ -380,3 +380,19 @@ export function vaciarSiEditando(idFormulario, id){
         vaciarFormulario(formulario);
     }
 }
+
+export function iniciarContador(idCampo, idContador){
+    const campo = document.querySelector("#" + idCampo);
+    const contador = document.querySelector("#" + idContador);
+    if (!campo || !contador){
+        return;
+    }
+
+    campo.addEventListener("input", () => {
+        contador.textContent = campo.value.length + " / " + campo.maxLength;
+    });
+
+    campo.form.addEventListener("reset", () => {
+        contador.textContent = "0 / " + campo.maxLength;
+    });
+}
