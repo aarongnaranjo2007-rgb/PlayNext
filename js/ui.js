@@ -271,6 +271,7 @@ export function iniciarFormulario(idFormulario, reglas, alEnviar) {
 export function leerUsuario(formulario) {
     const campos = formulario.elements;
     return {
+        id: campos.id.value,
         usuario: campos.usuario.value.trim(),
         correo: campos.correo.value.trim(),
         nacimiento: campos.nacimiento.value,
@@ -280,6 +281,9 @@ export function leerUsuario(formulario) {
 
 function vaciarFormulario(formulario) {
     formulario.reset();
+    if (formulario.elements.id){
+        formulario.elements.id.value = "";
+    }
     for (const campo of formulario.elements) {
         delete campo.dataset.tocado;
         campo.removeAttribute("aria-invalid");
@@ -356,4 +360,23 @@ export function iniciarLista(idLista, alPulsar){
 
 export function confirmarBorrado(texto){
     return confirm(texto);
+}
+
+export function rellenarUsuario(usuario){
+    const formulario = document.querySelector("#form-registro");
+    const campos = formulario.elements;
+
+    campos.id.value = usuario.id;
+    campos.usuario.value = usuario.usuario;
+    campos.correo.value = usuario.correo;
+    campos.nacimiento.value = usuario.nacimiento;
+    campos.acepto.checked = usuario.acepto;
+    campos.usuario.focus();
+}
+
+export function vaciarSiEditando(idFormulario, id){
+    const formulario = document.querySelector("#" + idFormulario);
+    if (formulario.elements.id.value === id){
+        vaciarFormulario(formulario);
+    }
 }
