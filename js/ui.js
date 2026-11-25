@@ -439,3 +439,43 @@ export function pintarMensajes(mensajes, motivos){
         lista.appendChild(item);
     }
 }
+
+function guardarCookie(nombre, valor, dias){
+    const caducidad = new Date();
+    caducidad.setDate(caducidad.getDate() + dias);
+    document.cookie = nombre + "=" + encodeURIComponent(valor)
+        + "; expires=" + caducidad.toUTCString() + "; path=/";
+}
+
+function leerCookie(nombre){
+    const cookies = document.cookie.split("; ");
+    for (const cookie of cookies){
+        const partes = cookie.split("=");
+        if (partes[0] === nombre){
+            return decodeURIComponent(partes[1]);
+        }
+    }
+    return null;
+}
+
+export function recordarContacto(formulario){
+    const campos = formulario.elements;
+    guardarCookie("contactoNombre", campos.nombre.value.trim(), 30);
+    guardarCookie("contactoEmail", campos.email.value.trim(), 30);
+}
+
+export function rellenarContacto(){
+    const formulario = document.querySelector("#form-contacto");
+    if (!formulario){
+        return;
+    }
+
+    const nombre = leerCookie("contactoNombre");
+    const email = leerCookie("contactoEmail");
+    if (nombre){
+        formulario.elements.nombre.value = nombre;
+    }
+    if (email){
+        formulario.elements.email.value = email;
+    }
+}

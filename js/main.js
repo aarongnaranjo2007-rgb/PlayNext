@@ -3,15 +3,17 @@ import { crear, obtenerTodos, obtenerPorId, actualizar, borrar } from "./almacen
 import { pintarListado, pintarContador, hayListado, hayFicha, pintarFicha, iniciarModal,
     iniciarFormulario, leerUsuario, pintarUsuarios, iniciarCancelar,
     iniciarLista, confirmarBorrado, rellenarUsuario, vaciarSiEditando, iniciarContador,
-    leerMensaje, pintarMensajes } from "./ui.js";
+    leerMensaje, pintarMensajes, recordarContacto, rellenarContacto } from "./ui.js";
 import { reglasRegistro, reglasContacto } from "./validacion.js";
 
 iniciarModal();
 
 iniciarFormulario("form-contacto", reglasContacto, formulario => {
     crear("mensajes", leerMensaje(formulario));
+    recordarContacto(formulario);
     pintarMensajes(obtenerTodos("mensajes"), motivos);
 });
+rellenarContacto();
 
 iniciarContador("mensaje", "contador-mensaje");
 
