@@ -263,6 +263,79 @@ export function iniciarFormulario(idFormulario, reglas, alEnviar) {
         evento.preventDefault();
         if (validarFormulario(formulario, reglas)) {
             alEnviar(formulario);
+            vaciarFormulario(formulario);
+        }
+    });
+}
+
+export function leerUsuario(formulario) {
+    const campos = formulario.elements;
+    return {
+        usuario: campos.usuario.value.trim(),
+        correo: campos.correo.value.trim(),
+        nacimiento: campos.nacimiento.value,
+        acepto: campos.acepto.checked
+    };
+}
+
+function vaciarFormulario(formulario) {
+    formulario.reset();
+    for (const campo of formulario.elements) {
+        delete campo.dataset.tocado;
+        campo.removeAttribute("aria-invalid");
+    }
+}
+
+export function pintarUsuarios(usuarios) {
+    const lista = document.querySelector("#lista-usuarios");
+    if (lista === null) {
+        return;
+    }
+
+    lista.textContent = "";
+
+    if (usuarios.length === 0) {
+        lista.appendChild(crearElemento("li", "Todavía no hay usuarios registrados."));
+        return;
+    }
+
+    for (const usuario of usuarios) {
+        const item = document.createElement("li");
+        const datos = crearElemento("p", usuario.usuario + " · " + usuario.correo + " · " + usuario.nacimiento);
+
+        const editar = crearElemento("button", "Editar");
+        editar.type = "button";
+        editar.dataset.accion = "editar";
+        editar.dataset.id = usuario.id;
+
+        const borrar = crearElemento("button", "Borrar");
+        borrar.type = "button";
+        borrar.dataset.accion = "borrar";
+        borrar.dataset.id = usuario.id;
+
+        item.appendChild(datos);
+        item.appendChild(editar);
+        item.appendChild(borrar);
+        lista.appendChild(item);
+    }
+}
+
+export function iniciarCancelar(idFormulario, idBoton) {
+    const formulario = document.querySelector("#" + idFormulario);
+    const boton = document.querySelector("#" + idBoton);
+    if (formulario === null || boton === null) {
+        return;
+    }
+
+    boton.addEventListener("click", () => {
+        vaciarFormulario(formulario);
+        for (const campo of formulario.elements) {
+            if (campo.id !== "") {
+                const aviso = document.querySelector("#error-" + campo.id);
+                if (aviso !== null) {
+                    aviso.textContent = "";
+                }
+            }
         }
     });
 }
